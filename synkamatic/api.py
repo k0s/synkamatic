@@ -1,6 +1,7 @@
 """
 generic API class for synkamatic
 """
+
 from mozillapulse.consumers import CodeConsumer
 import re
 import socket

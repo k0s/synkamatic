@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 
 """
-Synkamatic helps to automate the syncing of changes between mirrored Mozilla hg and github repos
+Synkamatic helps to automate the syncing of changes between mirrored
+(Mozilla) hg and github repos
 """
 
 # Things we'll need:
@@ -10,6 +11,7 @@ Synkamatic helps to automate the syncing of changes between mirrored Mozilla hg 
 
 import sys
 import optparse
+import .api
 
 def main(args=sys.argv[:]):
 
@@ -24,6 +26,11 @@ def main(args=sys.argv[:]):
                 return ''
     parser = optparse.OptionParser(usage=usage, description=__doc__, formatter=PlainDescriptionFormatter())
     options, args = parser.parse_args(args)
+
+    # instantiate API
+    # (from .ini files?)
+    # TODO
+    # api.Synkamatic(...)
 
 if __name__ == '__main__':
   main()
